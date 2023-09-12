@@ -1,15 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./components/App";
-import { QuizProvider } from "./contexts/QuizContext";
-import "./index.css";
+// import App from "./components/App";
+import Challenge from "./challenge/Challenge";
+// import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <QuizProvider>
-      <App />
-    </QuizProvider>
-    {/* <Challenge /> */}
+    {/* <App /> */}
+    <Challenge />
   </React.StrictMode>
 );
