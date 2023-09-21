@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { isFuture, isPast, isToday } from "date-fns";
+import { useState } from "react";
 import supabase from "../services/supabase";
 import Button from "../ui/Button";
 import { subtractDates } from "../utils/helpers";
@@ -46,7 +46,7 @@ async function createBookings() {
     .from("guests")
     .select("id")
     .order("id");
-  const allGuestIds = guestsIds.map((cabin) => cabin.id);
+  const allGuestIds = guestsIds.map((guest) => guest.id);
   const { data: cabinsIds } = await supabase
     .from("cabins")
     .select("id")
